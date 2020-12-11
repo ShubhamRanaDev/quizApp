@@ -17,9 +17,16 @@ const UserSchema = new mongoose.Schema({
     avatar:{
         type: String
     },
-    date:{
-        type: Date,
-        default:Date.now
+    scores:[{
+        score: {
+            type:Number,
+        },
+        date:{
+            type: Date
+        }
+        }],
+    currentQuiz:{
+        type:Object
     }
 })
 User = mongoose.model('user',UserSchema)
