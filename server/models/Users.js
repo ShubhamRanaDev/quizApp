@@ -17,6 +17,9 @@ const UserSchema = new mongoose.Schema({
     avatar:{
         type: String
     },
+    currentquiz:{
+        type: String
+    },
     scores:[{
         score: {
             type:Number,
@@ -24,10 +27,8 @@ const UserSchema = new mongoose.Schema({
         date:{
             type: Date
         }
-        }],
-    currentQuiz:{
-        type:Object
-    }
+        }]
+
 })
 User = mongoose.model('user',UserSchema)
 module.exports = User
