@@ -7,7 +7,7 @@ const jwt =  require('jsonwebtoken')
 const config = require('config')
 const User= require('../../models/Users')
 //create user
-router.post('/',[
+router.get('/',[
     check('name','Name is required')
         .not()
         .isEmail(),
